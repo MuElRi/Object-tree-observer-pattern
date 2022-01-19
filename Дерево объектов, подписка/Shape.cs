@@ -10,8 +10,9 @@ using System.Windows.Forms;
 using System.IO;
 namespace Grouping_and_saving
 {
-    abstract class Shape
+    abstract class Shape: ObjectObserved
     {
+        protected bool sticky = false;
         protected Point centre;
         static protected Point last_point;
         protected Point[] frame_point;
@@ -310,5 +311,34 @@ namespace Grouping_and_saving
             return frame_point[index];
         }
         public abstract string GetData();
+        public bool GetSticky()
+        {
+            return sticky;
+        }
+        public void SetSticky(bool f)
+        {
+            sticky = f;
+        }
+        public void Find(Shape shape)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                if (shape.frame_point[i].X > frame_point[1].X && shape.frame_point[i].X < frame_point[3].X)
+                    if (shape.frame_point[i].Y > frame_point[1].Y && shape.frame_point[i].Y < frame_point[3].Y)
+                    {
+                        flag = 1;
+                        return;
+                    }
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                if (shape.frame_point[1].X < frame_point[i].X && shape.frame_point[3].X > frame_point[i].X)
+                    if (shape.frame_point[1].Y < frame_point[i].Y && shape.frame_point[3].Y > frame_point[i].Y)
+                    {
+                        flag = 1;
+                        return;
+                    }
+            }
+        }
     }
 }

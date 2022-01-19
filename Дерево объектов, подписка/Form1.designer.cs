@@ -52,6 +52,7 @@ namespace Grouping_and_saving
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -85,10 +86,11 @@ namespace Grouping_and_saving
             this.flowLayoutPanel1.Controls.Add(this.label19);
             this.flowLayoutPanel1.Controls.Add(this.label20);
             this.flowLayoutPanel1.Controls.Add(this.label21);
+            this.flowLayoutPanel1.Controls.Add(this.checkBox1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(223, 696);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(223, 721);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel2
@@ -107,7 +109,7 @@ namespace Grouping_and_saving
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(216, 65);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(216, 64);
             this.flowLayoutPanel2.TabIndex = 7;
             // 
             // label1
@@ -288,9 +290,9 @@ namespace Grouping_and_saving
             this.label13.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label13.Font = new System.Drawing.Font("Segoe Print", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(3, 71);
+            this.label13.Location = new System.Drawing.Point(3, 70);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(216, 290);
+            this.label13.Size = new System.Drawing.Size(216, 285);
             this.label13.TabIndex = 10;
             this.label13.Text = "Удалить текущий элемент: Delete\r\nОчистить поле: \r\nCtrl+Delete\r\nУвеличить: Z\r\nУмен" +
     "ьшить: A\r\nЭлементы управления:\r\nShift+⇄⇅\r\nСмена цвета: \r\nCtrl+(первая буква цвет" +
@@ -301,7 +303,7 @@ namespace Grouping_and_saving
             this.label11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label11.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(3, 361);
+            this.label11.Location = new System.Drawing.Point(3, 355);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(216, 33);
             this.label11.TabIndex = 11;
@@ -313,7 +315,7 @@ namespace Grouping_and_saving
             this.label12.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label12.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(3, 394);
+            this.label12.Location = new System.Drawing.Point(3, 388);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(216, 33);
             this.label12.TabIndex = 12;
@@ -325,7 +327,7 @@ namespace Grouping_and_saving
             this.label14.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label14.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(3, 427);
+            this.label14.Location = new System.Drawing.Point(3, 421);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(216, 33);
             this.label14.TabIndex = 13;
@@ -337,7 +339,7 @@ namespace Grouping_and_saving
             this.label15.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label15.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(3, 460);
+            this.label15.Location = new System.Drawing.Point(3, 454);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(216, 33);
             this.label15.TabIndex = 14;
@@ -349,7 +351,7 @@ namespace Grouping_and_saving
             this.label16.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label16.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(3, 493);
+            this.label16.Location = new System.Drawing.Point(3, 487);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(216, 33);
             this.label16.TabIndex = 15;
@@ -361,7 +363,7 @@ namespace Grouping_and_saving
             this.label17.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label17.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(3, 526);
+            this.label17.Location = new System.Drawing.Point(3, 520);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(216, 33);
             this.label17.TabIndex = 16;
@@ -373,7 +375,7 @@ namespace Grouping_and_saving
             this.label18.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label18.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(3, 559);
+            this.label18.Location = new System.Drawing.Point(3, 553);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(216, 33);
             this.label18.TabIndex = 17;
@@ -385,7 +387,7 @@ namespace Grouping_and_saving
             this.label19.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label19.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(3, 592);
+            this.label19.Location = new System.Drawing.Point(3, 586);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(216, 33);
             this.label19.TabIndex = 18;
@@ -397,7 +399,7 @@ namespace Grouping_and_saving
             this.label20.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label20.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(3, 625);
+            this.label20.Location = new System.Drawing.Point(3, 619);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(216, 33);
             this.label20.TabIndex = 19;
@@ -409,21 +411,33 @@ namespace Grouping_and_saving
             this.label21.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label21.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(3, 658);
+            this.label21.Location = new System.Drawing.Point(3, 652);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(216, 33);
             this.label21.TabIndex = 20;
             this.label21.Text = "Девятиугольник - 9";
             this.label21.Click += new System.EventHandler(this.Polygon_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe Print", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.Location = new System.Drawing.Point(3, 688);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(216, 29);
+            this.checkBox1.TabIndex = 21;
+            this.checkBox1.Text = "Sticky";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // label22
             // 
             this.label22.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label22.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label22.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(3, 593);
+            this.label22.Location = new System.Drawing.Point(3, 618);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(134, 33);
+            this.label22.Size = new System.Drawing.Size(131, 33);
             this.label22.TabIndex = 21;
             this.label22.Text = "Group";
             this.label22.Click += new System.EventHandler(this.label22_Click);
@@ -433,9 +447,9 @@ namespace Grouping_and_saving
             this.label23.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label23.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label23.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(143, 593);
+            this.label23.Location = new System.Drawing.Point(140, 618);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(134, 33);
+            this.label23.Size = new System.Drawing.Size(131, 33);
             this.label23.TabIndex = 22;
             this.label23.Text = "Ungroup";
             this.label23.Click += new System.EventHandler(this.label23_Click);
@@ -445,9 +459,9 @@ namespace Grouping_and_saving
             this.label24.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label24.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label24.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(3, 626);
+            this.label24.Location = new System.Drawing.Point(3, 651);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(134, 33);
+            this.label24.Size = new System.Drawing.Size(131, 33);
             this.label24.TabIndex = 23;
             this.label24.Text = "Delete";
             this.label24.Click += new System.EventHandler(this.label24_Click);
@@ -457,9 +471,9 @@ namespace Grouping_and_saving
             this.label25.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label25.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label25.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(143, 626);
+            this.label25.Location = new System.Drawing.Point(140, 651);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(134, 33);
+            this.label25.Size = new System.Drawing.Size(131, 33);
             this.label25.TabIndex = 24;
             this.label25.Text = "Clear";
             this.label25.Click += new System.EventHandler(this.label25_Click);
@@ -469,9 +483,9 @@ namespace Grouping_and_saving
             this.label26.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label26.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label26.Location = new System.Drawing.Point(3, 659);
+            this.label26.Location = new System.Drawing.Point(3, 684);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(134, 33);
+            this.label26.Size = new System.Drawing.Size(131, 33);
             this.label26.TabIndex = 25;
             this.label26.Text = "Save";
             this.label26.Click += new System.EventHandler(this.label26_Click);
@@ -481,9 +495,9 @@ namespace Grouping_and_saving
             this.label27.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label27.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(143, 659);
+            this.label27.Location = new System.Drawing.Point(140, 684);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(134, 33);
+            this.label27.Size = new System.Drawing.Size(131, 33);
             this.label27.TabIndex = 26;
             this.label27.Text = "Load";
             this.label27.Click += new System.EventHandler(this.label27_Click);
@@ -494,7 +508,7 @@ namespace Grouping_and_saving
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox6.Location = new System.Drawing.Point(223, 0);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(700, 696);
+            this.pictureBox6.Size = new System.Drawing.Size(704, 721);
             this.pictureBox6.TabIndex = 1;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox6_Paint);
@@ -518,18 +532,19 @@ namespace Grouping_and_saving
             this.flowLayoutPanel3.Controls.Add(this.label26);
             this.flowLayoutPanel3.Controls.Add(this.label27);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(921, 0);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(927, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(282, 696);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(276, 721);
             this.flowLayoutPanel3.TabIndex = 2;
             // 
             // treeView1
             // 
             this.treeView1.BackColor = System.Drawing.SystemColors.Info;
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.treeView1.Font = new System.Drawing.Font("Segoe Print", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(276, 587);
+            this.treeView1.Size = new System.Drawing.Size(268, 612);
             this.treeView1.TabIndex = 27;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
@@ -537,7 +552,7 @@ namespace Grouping_and_saving
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 696);
+            this.ClientSize = new System.Drawing.Size(1203, 721);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -587,6 +602,7 @@ namespace Grouping_and_saving
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

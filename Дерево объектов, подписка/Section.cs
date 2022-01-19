@@ -168,7 +168,7 @@ namespace Grouping_and_saving
         }
         public override string GetData()
         {
-            return "Section";
+            return "Section: " + ((centre.X + centre_.X)/2).ToString() + " " + centre.Y.ToString();
         }
     }
 }

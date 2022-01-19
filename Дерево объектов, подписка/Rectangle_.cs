@@ -106,7 +106,108 @@ namespace Grouping_and_saving
         }
         public override string GetData()
         {
-            return "Rectangle";
+            return "Rectangle: " + centre.X.ToString() + " " + centre.Y.ToString();
+        }
+    }
+
+    class CopyOfRectangle_ : Shape
+    {
+        private int w_r, h_r;
+        public CopyOfRectangle_()
+        {
+            centre.X = 85;
+            centre.Y = 65;
+            w_r = 50;
+            h_r = 30;
+            color = "Red";
+            frame_point = new Point[]
+            {new Point(136, 34),
+            new Point(34, 34),
+            new Point(34, 96),
+            new Point(136, 96),
+            new Point(136, 34)};
+        }
+        public override void Draw(Graphics g)
+        {
+            if (color == "Transparent")
+            {
+                Pen pen = new Pen(Color.Black, 3);
+                g.DrawRectangle(pen, centre.X - w_r, centre.Y - h_r, 2 * w_r, 2 * h_r);
+            }
+            else
+            {
+                g.FillRectangle(Get_brush(), centre.X - w_r, centre.Y - h_r, 2 * w_r, 2 * h_r);
+            }
+            if (flag == 2)
+            {
+                Pen pen = new Pen(Color.Red, 2);
+                pen.DashPattern = new float[] { 1, 1 };
+                g.DrawPolygon(pen, frame_point);
+            }
+            else if (flag == 1)
+            {
+                Pen pen = new Pen(Color.Gray, 2);
+                pen.DashPattern = new float[] { 1, 1 };
+                g.DrawPolygon(pen, frame_point);
+            }
+        }
+        public override void Increase(int w, int h)
+        {
+            w_r += 5;
+            h_r += 3;
+            frame_point[0].Y -= 3;
+            frame_point[1].Y -= 3;
+            frame_point[2].Y += 3;
+            frame_point[3].Y += 3;
+            frame_point[4].Y -= 3;
+            frame_point[0].X += 5;
+            frame_point[3].X += 5;
+            frame_point[1].X -= 5;
+            frame_point[2].X -= 5;
+            frame_point[4].X += 5;
+        }
+        public override void Reduce()
+        {
+            if (h_r > 10)
+            {
+                w_r -= 5;
+                h_r -= 3;
+                frame_point[0].Y += 3;
+                frame_point[1].Y += 3;
+                frame_point[2].Y -= 3;
+                frame_point[3].Y -= 3;
+                frame_point[4].Y += 3;
+                frame_point[0].X -= 5;
+                frame_point[3].X -= 5;
+                frame_point[1].X += 5;
+                frame_point[2].X += 5;
+                frame_point[4].X -= 5;
+            }
+        }
+        public override void Save(StreamWriter stream)
+        {
+            stream.WriteLine("rectangle");
+            stream.WriteLine(color + " " + centre + " " + " " + flag + " " + w_r + " " + h_r);
+        }
+        public override void Load(StreamReader stream)
+        {
+            string[] data = stream.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            color = data[0];
+            string[] g = Regex.Replace(data[1], @"[\{\}a-zA-Z=]", "").Split(',');
+            centre = new Point(int.Parse(g[0]), int.Parse(g[1]));
+            flag = int.Parse(data[2]);
+            w_r = int.Parse(data[3]);
+            h_r = int.Parse(data[4]);
+            frame_point = new Point[]
+            {new Point(centre.X + w_r + 1, centre.Y - h_r - 1),
+            new Point(centre.X - w_r - 1, centre.Y - h_r - 1),
+            new Point(centre.X - w_r - 1, centre.Y + h_r + 1),
+            new Point(centre.X + w_r + 1, centre.Y + h_r + 1),
+            new Point(centre.X + w_r + 1, centre.Y - h_r - 1)};
+        }
+        public override string GetData()
+        {
+            return "Rectangle: " + centre.X.ToString() + " " + centre.Y.ToString();
         }
     }
 }

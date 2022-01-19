@@ -180,7 +180,7 @@ namespace Grouping_and_saving
         }
         public override string GetData()
         {
-            return "Polygon";
+            return "Polygon: " + centre.X.ToString() + " " + centre.Y.ToString();
         }
     }
 }

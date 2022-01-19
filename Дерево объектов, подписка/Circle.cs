@@ -81,7 +81,82 @@ namespace Grouping_and_saving
         }
         public override string GetData()
         {
-            return "Circle";
+            return "Circle: " + centre.X.ToString() + " " + centre.Y.ToString();
+        }
+    }
+
+    class CopyOfCircle : Shape
+    {
+        private int r, R;
+        public CopyOfCircle()
+        {
+            centre.X = 55;
+            centre.Y = 55;
+            r = 40;
+            R = (int)(40 * Math.Sqrt(2));
+            color = "Red";
+            frame_point = new Point[5];
+            frame_point = Build_polygon(5, R);
+        }
+        public override void Draw(Graphics g)
+        {
+            if (color == "Transparent")
+            {
+                Pen pen = new Pen(Color.Black, 2);
+                g.DrawEllipse(pen, centre.X - r, centre.Y - r, 2 * r, 2 * r);
+            }
+            else
+            {
+                g.FillEllipse(Get_brush(), centre.X - r, centre.Y - r, 2 * r, 2 * r);
+            }
+            if (flag == 2)
+            {
+                Pen pen = new Pen(Color.Red, 2);
+                pen.DashPattern = new float[] { 1, 1 };
+                g.DrawPolygon(pen, frame_point);
+            }
+            else if (flag == 1)
+            {
+                Pen pen = new Pen(Color.Gray, 2);
+                pen.DashPattern = new float[] { 1, 1 };
+                g.DrawPolygon(pen, frame_point);
+            }
+        }
+        public override void Increase(int w, int h)
+        {
+            r += 4;
+            R = (int)(r * Math.Sqrt(2));
+            frame_point = Build_polygon(frame_point.Length, R);
+        }
+        public override void Reduce()
+        {
+            if (r > 10)
+            {
+                r -= 4;
+                R = (int)(r * Math.Sqrt(2));
+                frame_point = Build_polygon(frame_point.Length, R);
+            }
+        }
+        public override void Save(StreamWriter stream)
+        {
+            stream.WriteLine("circle");
+            stream.WriteLine(color + " " + centre + " " + " " + flag + " " + r + " " + R);
+
+        }
+        public override void Load(StreamReader stream)
+        {
+            string[] data = stream.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            color = data[0];
+            string[] g = Regex.Replace(data[1], @"[\{\}a-zA-Z=]", "").Split(',');
+            centre = new Point(int.Parse(g[0]), int.Parse(g[1]));
+            flag = int.Parse(data[2]);
+            r = int.Parse(data[3]);
+            R = int.Parse(data[4]);
+            frame_point = Build_polygon(5, R);
+        }
+        public override string GetData()
+        {
+            return "CopyOfCircle: " + centre.X.ToString() + " " + centre.Y.ToString();
         }
     }
 }

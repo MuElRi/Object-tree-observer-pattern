@@ -242,12 +242,16 @@ namespace Grouping_and_saving
                 }
                 shape[current].Selected(2);
                 pictureBox6.Invalidate();
-                shape.Notify();
+                if (current_ != current)
+                {
+                    checkBox1.Checked = false;
+                }
             }
         }
         private void pictureBox6_MouseUp(object sender, MouseEventArgs e)
         {
             mouse_fl = false;
+            shape.Notify();
         }
         private void pictureBox6_MouseMove(object sender, MouseEventArgs e)
         {
@@ -273,6 +277,10 @@ namespace Grouping_and_saving
                             shape[i].Mouse_move(new Point(e.X, e.Y), pictureBox6.Width, pictureBox6.Height, false);
                         }
                     }
+                if(checkBox1.Checked)
+                {
+                    shape[current].Notify(current);
+                }
                 pictureBox6.Invalidate();
             }
         }
@@ -306,6 +314,7 @@ namespace Grouping_and_saving
             current = shape.Size() - 1;
             pictureBox6.Invalidate();
             shape.Notify();
+            checkBox1.Checked = false;
         }
         private void label12_Click(object sender, EventArgs e)
         {
@@ -318,6 +327,7 @@ namespace Grouping_and_saving
             current = shape.Size() - 1;
             pictureBox6.Invalidate();
             shape.Notify();
+            checkBox1.Checked = false;
         }
         private void label14_Click(object sender, EventArgs e)
         {
@@ -330,6 +340,7 @@ namespace Grouping_and_saving
             current = shape.Size() - 1;
             pictureBox6.Invalidate();
             shape.Notify();
+            checkBox1.Checked = false;
         }
         private void Polygon_Click(object sender, EventArgs e)
         {
@@ -344,6 +355,7 @@ namespace Grouping_and_saving
             current = shape.Size() - 1;
             pictureBox6.Invalidate();
             shape.Notify();
+            checkBox1.Checked = false;
         }
         private void label22_Click(object sender, EventArgs e)
         {
@@ -363,6 +375,7 @@ namespace Grouping_and_saving
             flag = false;
             pictureBox6.Invalidate();
             shape.Notify();
+            checkBox1.Checked = false;
         }
         private void label23_Click(object sender, EventArgs e)
         {
@@ -383,6 +396,7 @@ namespace Grouping_and_saving
             }
             pictureBox6.Invalidate();
             shape.Notify();
+            checkBox1.Checked = false;
         }
         private void Color_Click(object sender, EventArgs e)
         {
@@ -496,6 +510,16 @@ namespace Grouping_and_saving
                 current = node.Index;
                 shape[current].Selected(2);
                 pictureBox6.Invalidate();
+            }
+        }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!shape.empty())
+            {
+                if (checkBox1.Checked)
+                {
+                    shape[current].Add(shape);
+                }
             }
         }
     }
